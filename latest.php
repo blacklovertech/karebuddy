@@ -1,13 +1,13 @@
 <?php include ('includes/connection.php'); ?>
 
 
-<?php 
-session_start();
-if (strlen($_SESSION['id']==0)) {
-  header('location:login.php');
-  } else{
+
+
+
+
+
     
-    ?>
+
 <div id="wrapper">
     <div id="page-wrapper">
 
