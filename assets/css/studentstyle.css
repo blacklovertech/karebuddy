@@ -1,0 +1,393 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2014, 3:30:25 PM
+    Author     : Maria Vincent. S
+*/
+
+.ui-dialog {
+    top: 0;
+    left: 0;
+    padding: .2em;
+    border:1px;
+
+}
+.ui-dialog .ui-dialog-titlebar {
+    border:1px;
+    display: none;
+}
+.ui-dialog .ui-dialog-content {
+    border: 0;
+    padding: 20px;
+    font-size:18px;
+    color:#002754;
+    background-color: #e6f2ff;
+    overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    text-align: left;
+    border-width: 1px 0 0 0;
+    background-image: none;
+    margin-top: .5em;
+    padding: .3em 1em .5em .4em;
+    background-color: #002754;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: right;
+
+}
+.ui-dialog .ui-dialog-buttonpane button {
+    margin: .5em .4em .5em 0;
+    cursor: pointer;
+
+}
+.ui-dialog .ui-resizable-se {
+    width: 12px;
+    height: 12px;
+    right: -5px;
+    bottom: -5px;
+    background-position: 16px 16px;
+
+}
+.ui-draggable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .yescls
+{
+    font-size:15px;
+    color: #002754;
+    width: 150px;
+    background: #e6f2ff;
+
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset .cancelcls
+{
+    font-size:15px;
+    color: #002754;
+    width: 150px;
+    background: #e6f2ff;
+}
+
+body {
+    font-family:verdana,arial,sans-serif;
+    font-size:11pt;
+    margin:5px;
+    /*background-color:#F5F7FD;*/
+    background-color:#ffffff;
+}
+tr.header{
+    background-color:#002754;
+    color: white;
+    font-weight: bold;
+}
+tr.subheader{
+    /*background-color:#6685C2;*/
+    background-color: #6685C2;
+    color: white;
+    font-weight: bold;
+}
+
+tr.subTitle{
+    background-color:#6685C2;
+    color: white;
+    font-weight: bold;
+}
+
+td.subTitle{
+    background-color:#6685C2;
+    color: white;
+    font-weight: bold;
+}
+
+td.subheader{
+    background-color: #6685C2;
+    color: white;
+    font-weight: bold;
+}
+
+div.subheader{
+    background-color: #6685C2;
+    color: white;
+    font-weight: bold;
+}
+
+div.subheader1{
+    background-color:#DCDCDC;
+    color: #002754;
+    font-weight: bold;
+}
+
+tr.subheader1{
+    background-color:#DCDCDC;
+    color: #002754;
+    font-weight: bold;
+}
+
+td.subheader1{
+    background-color:#DCDCDC;
+    color: #002754;
+    font-weight: bold;
+}
+
+td.header{
+    background-color:#002754;
+    color: white;
+    font-weight: bold;
+}
+
+table.maintable{
+    background-color:#F5F7FD;
+}
+
+.dynaColorTR1{
+    /*background-color: #ADBECE;*/
+    /* background: url( ../Image/TR1.gif);*/
+    /*background-color: #F3F6FC;*/
+    background-color:#ffffff;
+}
+/* Dynamic Color 2 for Table Rows  (Stripe Tables)*/
+.dynaColorTR2{
+    /*background-color: #C7D5E2;*/
+    /*background-color: #EAEFF9;*/
+    background-color:#ffffff;
+    /*color: #000;*/
+    /*  background: url( ../Image/TR2.gif);*/
+}
+
+TABLE.subTable{
+    background-color: #F5F7FD;
+    border-left-color:#000;
+    border-right-color:#000;
+    border: 2px;
+    padding: 2px;
+    border-spacing: 3px;
+}
+
+table{
+    font-family:verdana,arial,sans-serif;
+    font-size:11pt;
+    background-color:#ffffff;
+}
+
+tr.subtotal{
+    color: #002754;
+    font-weight: bold;
+}
+
+td.subheader2{
+    background-color:#002754;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr.subheader3{
+    background-color:#FDFDFD;
+    color: #002754;
+    font-weight: bold;
+}
+
+td.subheader3{
+    background-color:#FDFDFD;
+    color: #002754;
+    font-weight: bold;
+}
+
+.blink {
+    animation: blink 1s steps(5, start) infinite;
+    background-color: #ffff66;
+}
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+tr.finalclass{
+    font-weight:bold;
+    font-size:12pt;
+    font-family:Tahoma;
+}
+
+.tooltip{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}
+
+.input {
+    position: relative;
+}
+
+.input:hover .tooltip {
+    background: blue;
+    border-radius: 3px;
+    bottom: -60px;
+    color: white;
+    display: inline;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    position: absolute;
+}
+
+.input:hover .tooltip:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid blue;
+}
+
+input.clsajaxcall{
+    background:  url(../../resources/Image/search.png) right no-repeat;
+    background-color: #ffffff
+}
+
+.button,submit {
+    background-color: #002754; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button6 {background-color: #002754} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+.button2 {background-color: #f0ad4e} /* Blue */
+
+.button {
+    transition-duration: 0.4s;
+}
+
+.button6:hover {
+    background-color: #4169E1; /* Green */
+    color: white;
+}
+
+.button5:hover {
+    background-color:#f0ad4e; /* Green */
+    color: white;
+}
+
+.button2:hover {
+    background-color:#555555; /* Green */
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 11pt;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 11pt;
+}
+
+label {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+    font-size: 11pt;
+}
+
+.blink {
+    animation: blink 1s steps(5, start) infinite;
+    background-color: #ffff66;
+    }
+    @keyframes blink {
+    to {
+    visibility: hidden;
+    }
+}
+tr.finalclass{
+    font-weight:bold;
+    font-size:12pt;
+    font-family:Tahoma;
+}
+
+/*input.clsajaxcall{
+    background:  url(../../resources/Image/search.png) right no-repeat;
+    background-color: #ffffff
+}*/
+
+/*
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 11pt;
+}
+
+label {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+    font-size: 11pt;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 10pt;
+}*/
