@@ -1,0 +1,2 @@
+# karebuddy
+Kare Note Managemtn
