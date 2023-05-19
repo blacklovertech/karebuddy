@@ -1,3 +1,15 @@
+<?php
+if(isset($_POST["SubmitBtn"])){
+
+$to = "jkjanarthanan007gmail.com";
+$subject = "Subscription letter";
+$from=$_POST["email"];
+$headers = "From: $from";
+
+mail($to,$subject,$msg,$headers);
+echo "Email successfully sent.";
+}
+?>
 <footer class="page-footer">
         <div class="container">
             <div class="social-icons">
@@ -10,7 +22,7 @@
                             </div>
                             <form class="d-flex justify-content-center flex-wrap my-2" method="post">
                                 <div class="my-2"><input class="form-control" type="email" name="email" placeholder="Your Email" style="width: 264.8px;"></div>
-                                <div class="my-2"><button class="btn btn-primary ms-sm-2" type="submit">Subscribe </button></div>
+                                <div class="my-2"><button class="btn btn-primary ms-sm-2" name="SubmitBtn" type="submit">Subscribe </button></div>
                             </form>
                         </div>
                     </div>
