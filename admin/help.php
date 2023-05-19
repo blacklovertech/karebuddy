@@ -12,9 +12,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                         <div class="col-xs-4">
-            <a href="addsubject.php" class="btn btn-primary">Add New subject</a>
-            </div>
-                        Subject
+            </div> HELP Mail
                         </h1>
                          
 <div class="row">
