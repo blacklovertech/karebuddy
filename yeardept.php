@@ -17,7 +17,7 @@ include('includes/header.php');
         {
         ?>
         <div class="col-md-6 col-lg-4">
-        <div class="card border-0"><a href="subjectyear.php?<?php echo"name=$course[name]&deptid=$_GET[deptid]&yearid=$course[yearid]"?>"><img class="card-img-top scale-on-hover" src="assets/img/dept/<?php echo $course['imgpath'];?>" alt="Card Image"></a>
+        <div class="card border-0"><a href="subjectyear.php?<?php echo"name=$course[name]&deptid=$_GET[deptid]&yearid=$course[yearid]"?>"><img class="card-img-top scale-on-hover" src="assets/img/<?php echo $course['imgpath'];?>" alt="Card Image"></a>
                 <div class="card-body">
                     <h6><a href="CSE/index.html"> <?php echo $course['yearid'];?></a></h6>
                     <p class="text-muted card-text"><?php echo $course['name'];?> </p>
