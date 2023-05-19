@@ -2,10 +2,7 @@
 include ('includes/header.php');
 include ('includes/connection.php');
 
-if (strlen($_SESSION['id']==0)) {
-  header('location:login.php');
-  } else{
-    
+
     ?>
 
 <?php
@@ -68,7 +65,7 @@ echo "<script>alert('file size is not proper');</script>";
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="table-responsive">
+                    <div class="table">
 
                         <form role="form" action="" method="POST" enctype="multipart/form-data">
                             <table class="table table-bordered table-striped table-hover">
@@ -78,6 +75,9 @@ echo "<script>alert('file size is not proper');</script>";
                                         <th> <input type="text" name="title" class="form-control" value="<?php if(isset($_POST['upload'])) {
                                              echo $file_title; } ?>" required="">
                                         </th>
+
+                                    </tr>
+                                    <tr>
                                         <th><label for="post_tags">Short Note Description</label></th>
                                         <th> <input type="text" name="description" class="form-control" value="<?php if(isset($_POST['upload'])) {
                                        echo $file_description;  } ?>" required="" "></th>
@@ -95,7 +95,10 @@ echo "<script>alert('file size is not proper');</script>";
                                                 </option>
                                                 <?php endwhile;      ?>
                                             </select></th>
-                                            <th><label for=" post_tags">Year ID</label></th>
+
+                                    <tr>
+                                    <tr>
+                                        <th><label for=" post_tags">Year ID</label></th>
                                         <th> <select cclass=" form-control" name="yearid">
                                                 <?php
               $sql = "SELECT * FROM `year`";
@@ -107,9 +110,8 @@ echo "<script>alert('file size is not proper');</script>";
                                                 </option>
                                                 <?php endwhile;      ?>
                                             </select></th>
-                                   <tr>
-                                 
-                                        <th><label for=" post_tags">Course Name</label></th>
+                                    </tr>
+                                    <th><label for=" post_tags">Course Name</label></th>
                                     <th> <select cclass=" form-control" name="subjectid">
                                             <?php
               $sql = "SELECT * FROM `subject`";
@@ -144,15 +146,3 @@ echo "<script>alert('file size is not proper');</script>";
 </tbody>
 </table>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-<?php } ?>

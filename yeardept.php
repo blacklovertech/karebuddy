@@ -5,7 +5,7 @@ include('includes/header.php');
 <section class="portfolio-block projects-cards">
     <div class="container">
         <div class="heading">
-            <h2 style="color: var(--bs-indigo);">DEPARTMENT's </h2>
+            <h2 style="color: var(--bs-indigo);">Year's </h2>
         </div>
         <div class="row">
             <?php

@@ -6,32 +6,33 @@ $directory="files/$_GET[deptid]/$_GET[yearid]/$_GET[subjectid]";
 
 ?>
 <main class="page projects-page">
-    
+
     <div class="container">
-            <div class="heading">
-                <center>
-                <h2 style="color: var(--bs-indigo);"><?php echo $_GET['name'],"__", $_GET['subjectid'];?></h2></center>
-            </div>    
-                          <form action="" method="post">
-                                <table id="table" class="table">
+        <div class="heading">
+            <center>
+                <h2 style="color: var(--bs-indigo);"><?php echo $_GET['name'],"__", $_GET['subjectid'];?></h2>
+            </center>
+        </div>
+        <form action="" method="post">
+            <table id="table" class="table">
 
 
-                                    <thead>
+                <thead>
 
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Type </th>
-                                            <th>Subject ID</th>
-                                            <th>View</th>
-                                            <th>Download</th>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Type </th>
+                        <th>Subject ID</th>
+                        <th>View</th>
+                        <th>Download</th>
 
-                                        </tr>
+                    </tr>
 
-                                    </thead>
-                                    <tbody>
+                </thead>
+                <tbody>
 
-                                        <?php
+                    <?php
 
 $query = "SELECT * FROM uploads where subjectid='$_GET[subjectid]' ";
 $run_query = mysqli_query($conn, $query) or die(mysqli_error($conn));
@@ -60,9 +61,6 @@ while ($row = mysqli_fetch_array($run_query)) {
 }
 }
 ?>
-
-
-
-                                    </tbody>
-                                </table>
-                            </form>
+                </tbody>
+            </table>
+        </form>

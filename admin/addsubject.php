@@ -2,13 +2,7 @@
 include ('includes/header.php');
 include ('includes/connection.php');
 
-if (strlen($_SESSION['id']==0)) {
-  header('location:login.php');
-  } else{
-    
-    ?>
 
-<?php
 
 if (isset($_POST['upload'])) {
     
@@ -43,7 +37,7 @@ if (isset($_POST['upload'])) {
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="table-responsive">
+                    <div class="table">
 
                         <form role="form" action="" method="POST" enctype="multipart/form-data">
                             <table class="table table-bordered table-striped table-hover">
@@ -120,7 +114,3 @@ if (isset($_POST['upload'])) {
 
 
 
-
-
-
-<?php } ?>

@@ -1,14 +1,7 @@
 <?php include ('includes/connection.php'); ?>
 <?php include ('includes/header.php'); ?>
 
-   
-<?php 
-session_start();
-if (strlen($_SESSION['id']==0)) {
-  header('location:login.php');
-  } else{
-    
-    ?>
+
  <div id="wrapper">
         <div id="page-wrapper">
 
@@ -26,7 +19,7 @@ if (strlen($_SESSION['id']==0)) {
                          
 <div class="row">
 <div class="col-lg-12">
-        <div class="table-responsive">
+        <div class="table">
 
 <form action="" method="post">
             <table class="table table-bordered table-striped table-hover">
@@ -34,7 +27,7 @@ if (strlen($_SESSION['id']==0)) {
 
             <thead>
                     <tr>
-                        <th>Year ID</th>
+                        <th>Subject ID</th>
                         <th>Description</th>
                         <th>Image Path </th>
                         <th>Name</th>
@@ -101,5 +94,3 @@ while ($row = mysqli_fetch_array($run_query)) {
 </body>
 
 </html
-
-<?php } ?>
