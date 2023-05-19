@@ -65,7 +65,7 @@ echo "<script>alert('file size is not proper');</script>";
 
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="table">
+                    <div class="table-responsive">
 
                         <form role="form" action="" method="POST" enctype="multipart/form-data">
                             <table class="table table-bordered table-striped table-hover">
