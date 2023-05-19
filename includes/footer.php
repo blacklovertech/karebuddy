@@ -17,7 +17,7 @@
                 </section>
             </div>
             <div class="links"><a href="extra/about.html">About Us</a><a href="extra/help.html">Help Us</a><a href="projects/index.html">Projects</a></div>
-        </div>
+      <a href="https://blacklovertech.github.io/blacklovertech"><em>By Retro Tech</em></a> </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

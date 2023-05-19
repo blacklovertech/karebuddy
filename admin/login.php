@@ -1,7 +1,7 @@
 <?php include ('includes/connection.php'); ?>
 <?php include ('includes/header.php'); ?>
 
-<?php session_start(); 
+<?php 
 
 // Code for login 
 if(isset($_POST['login']))
