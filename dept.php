@@ -11,7 +11,7 @@
               while ($course = mysqli_fetch_array($all_course,MYSQLI_ASSOC)):;
             ?>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="yeardept.php?deptid=<?php echo $course["deptid"];?>"><img class="card-img-top scale-on-hover" src="assets/img/dept/<?php echo $course["imgpath"];?>" alt="Card Image">
+                        <div class="card border-0"><a href="yeardept.php?deptid=<?php echo $course["deptid"];?>"><img class="card-img-top scale-on-hover" src="assets/img/<?php echo $course["imgpath"];?>" alt="Card Image">
                             <div class="card-body">
                                 <h6><?php echo $course["name"];?></a></h6>
                                 <p class="text-muted card-text"> <?php echo $course["descri"];?></p>

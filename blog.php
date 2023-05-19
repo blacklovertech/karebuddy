@@ -1,19 +1,31 @@
-<?php
-// Get all HTML files in the directory
-$html_files = glob("*.{html,htm,jpg,png}", GLOB_BRACE);
-$PORT=8080;
-$url = $_SERVER['DOCUMENT_ROOT']. '/blog/';
-echo $url;
-// Print out each file as a link
-foreach($html_files as $file) {
-    $contents = file_get_contents($file);
-    $start = strpos($contents, '<title>');
-    if ($start !== false) {
-         $end = strpos($contents, '</title>', $start);
-         $line = substr($contents, $start + 7 , $end - $start - 7);
-         echo  $_SERVER['HTTP_HOST'] ,"<center><a href=" . '"' . $url . $file . '"' . ">$line</a></center><br>\n";
-    }
-}
-
-
-?>
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <div class="container">
+            <div class="heading">
+                <h2 style="color: var(--bs-indigo);">Blog Posts's</h2>
+            </div>
+            <div class="row">
+                <?php
+              $sql = "SELECT * FROM `blog`";
+              $all_course = mysqli_query($conn,$sql);
+              while ($course = mysqli_fetch_array($all_course,MYSQLI_ASSOC)):;
+            ?>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a href="blog/view.php?page=<?php echo $course["filename"];?>"><img
+                                class="card-img-top scale-on-hover" src="assets/img/blog/<?php echo $course["imgpath"];?>"
+                                alt="Card Image">
+                            <div class="card-body">
+                                <h6><?php echo $course["name"];?>
+                        </a></h6>
+                        <p class="text-muted card-text"> <?php echo $course["descri"];?></p>
+                    </div>
+                </div>
+            </div>
+            <?php
+                endwhile;
+                // While loop must be terminated
+            ?>
+        </div>
+        </div>
+    </section>
+</main>
