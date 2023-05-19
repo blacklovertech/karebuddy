@@ -6,7 +6,7 @@ $subject = "Subscription letter";
 $from=$_POST["email"];
 $headers = "From: $from";
 
-mail($to,$subject,$msg,$headers);
+mail($to,$subject,$headers);
 echo "Email successfully sent.";
 }
 ?>
