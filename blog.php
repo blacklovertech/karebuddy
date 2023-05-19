@@ -1,7 +1,8 @@
 <?php
 // Get all HTML files in the directory
 $html_files = glob("*.{html,htm,jpg,png}", GLOB_BRACE);
-$url = $_SERVER['HTTP_HOST']  . '/blog/';
+$PORT=8080;
+$url = $_SERVER['DOCUMENT_ROOT']. '/blog/';
 echo $url;
 // Print out each file as a link
 foreach($html_files as $file) {
