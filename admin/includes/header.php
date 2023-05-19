@@ -26,9 +26,12 @@ include('connection.php');
         <td><a href="home.php"><h3>Home</a></td>
         <td><a href="notes.php"><h3>Notes</a></td>
         <td><a href="year.php"><h3>Year</a></td>
+        
+        <td><a href="blog.php"><h3>Blog</a></td>
         <td><a href="subject.php"><h3>Subject</a></td>
         <td><a href="dept.php"><h3>Dept</a></td>
         <td><a href="users.php"><h3>Users</a></td>
+        <td><a href="help.php"><h3>Help</a></td>
         <td><a href="../"><h3>Logout</a></td>
     </tr>
 </table>

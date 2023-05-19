@@ -16,8 +16,10 @@
                     </div>
                 </section>
             </div>
-            <div class="links"><a href="extra/about.html">About Us</a><a href="extra/help.html">Help Us</a><a href="projects/index.html">Projects</a></div>
-      <a href="https://blacklovertech.github.io/blacklovertech"><em>By Retro Tech</em></a> </div>
+            <div class="links">
+                <a href="index.php?page=about">About Us</a>
+                <a href="index.php?page=help">Help Us</a>
+                <a href="https://github.com/blacklovertech/karebuddy/"><em>Developed By Retro Tech</em></a> </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
