@@ -1,5 +1,5 @@
 <?php session_start();
-
+include "filesLogic.php";
     ?>
 
 <?php
@@ -38,13 +38,14 @@ echo "<script>alert('file size is not proper');</script>";
         $folder  = "../files/$deptid/$yearid/$subjectid/";
         $fileext = strtolower(pathinfo($file, PATHINFO_EXTENSION) );
         $notefile = rand(1000 , 1000000) .'.'.$fileext;
+        
         if(move_uploaded_file($_FILES['file']['tmp_name'], $folder.$notefile)) {
             $query = "INSERT INTO `uploads`( `file_name`, `file_description`, `file_type`, `file_uploader`, `deptid`, `yearid`, `subjectid`, `file`)
              VALUES ('$file_title' , '$file_description' , '$fileext' , 'admin' ,'$deptid','$yearid','$subjectid','$notefile')";
             $result = mysqli_query($conn , $query) or die(mysqli_error($conn));
             if (mysqli_affected_rows($conn) > 0) {
                 echo "<script> alert('file uploaded successfully.It will be published after admin approves it');
-                window.location.href='notes.php';</script>";
+                window.location.href='index.php?page=notes';</script>";
             }
             else {
                 "<script> alert('Error while uploading..try again');</script>";
@@ -77,7 +78,7 @@ echo "<script>alert('file size is not proper');</script>";
                                     <tr>
                                         <th><label for="post_tags">Short Note Description</label></th>
                                         <th> <input type="text" name="description" class="form-control" value="<?php if(isset($_POST['upload'])) {
-                                       echo $file_description;  } ?>" required="" "></th>
+                                       echo $file_description;  } ?>" ></th>
                                     </tr>
                                     <tr>
                                         <th><label for=" post_tags">DEPARTMENT ID</label> </th>

@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_array($run_query)) {
 }
 else {
     echo "<script>alert('Not notes yet! Start uploading now');
-    window.location.href= 'uploadnote.php';</script>";
+    window.location.href= 'index.php?page=uploadnote';</script>";
 }
 ?>
 
@@ -103,7 +103,7 @@ else {
         $run_del_query = mysqli_query($conn, $del_query) or die (mysqli_error($conn));
         if (mysqli_affected_rows($conn) > 0) {
             echo "<script>alert('note deleted successfully');
-            window.location.href='notes.php';</script>";
+            window.location.href='index.php';</script>";
         }
         else {
          echo "<script>alert('error occured.try again!');</script>";   

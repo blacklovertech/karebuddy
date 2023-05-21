@@ -77,5 +77,4 @@ while ($row = mysqli_fetch_array($run_query)) {
 
         </tbody>
         </tbody>
-
-    
+        <body>

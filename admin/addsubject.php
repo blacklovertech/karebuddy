@@ -20,7 +20,7 @@ if (isset($_POST['upload'])) {
 
    if (mysqli_affected_rows($conn) > 0) {
        echo "<script> alert('Added successfully.It will be published ');
-       window.location.href='subject.php';</script>";
+       window.location.href='index.php';</script>";
    }
    else {
        "<script> alert('Error while Adding ..try again');</script>";
