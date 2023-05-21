@@ -20,6 +20,10 @@ $directory="files/$_GET[deptid]/$_GET[yearid]/$_GET[subjectid]";
                 <thead>
 
                     <tr>
+                        <th>
+</th> 
+                    </tr>
+                    <tr>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Type </th>
@@ -30,6 +34,7 @@ $directory="files/$_GET[deptid]/$_GET[yearid]/$_GET[subjectid]";
                     </tr>
 
                 </thead>
+
                 <tbody>
 
                     <?php
@@ -46,16 +51,21 @@ while ($row = mysqli_fetch_array($run_query)) {
     $file_uploader = $row['file_uploader'];
     $file_status = $row['status'];
     $file = $row['file'];
+    $deptid = $row['deptid'];
+    $yearid = $row['yearid'];
     $subjectid = $row['subjectid'];
 
-    echo "<tr>";
+    echo "<tr>"; 
     echo "<td>$file_name</td>";
     echo "<td>$file_description</td>";
     echo "<td>$file_type</td>";
     echo "<td>$subjectid</td>";
-     echo "<td><a href='files/$file' target='_blank' style='color:green'>View </a></td>";
-  echo " <td><a href='files/$file' target='_blank' style='color:green'>Download </a></td>
-";
+     echo "<td><a href='files/$deptid/$yearid/$subjectid/$file' target='_blank' style='color:green'>View </a></td>";
+  echo " 
+  <td>
+  
+  <a id='download' href='files/$deptid/$yearid/$subjectid/$file' target='_blank' style='color:green' download='$file_name-$file_description'>Download</a></td>
+  </div>";
     echo "</tr>";
 
 }
@@ -64,3 +74,8 @@ while ($row = mysqli_fetch_array($run_query)) {
                 </tbody>
             </table>
         </form>
+
+        </tbody>
+        </tbody>
+
+    

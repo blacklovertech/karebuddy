@@ -73,11 +73,11 @@ while ($row = mysqli_fetch_array($run_query)) {
     if (isset($_GET['del'])) {
         $note_del = mysqli_real_escape_string($conn, $_GET['del']);
        
-        $del_query = "DELETE FROM subject where yearid='$subjectid'";
+        $del_query = "DELETE FROM subject where subjectid='$subjectid'";
         $run_del_query = mysqli_query($conn, $del_query) or die (mysqli_error($conn));
         if (mysqli_affected_rows($conn) > 0) {
-            echo "<script>alert('year deleted successfully');
-            window.location.href='year.php';</script>";
+            echo "<script>alert('Subject deleted successfully');
+            window.location.href='subject.php';</script>";
         }
         else {
          echo "<script>alert('error occured.try again!');</script>";   

@@ -43,7 +43,7 @@ echo "<script>alert('file size is not proper');</script>";
         $notefile = rand(1000 , 1000000) .'.'.$fileext;
         if(move_uploaded_file($_FILES['file']['tmp_name'], $folder.$notefile)) {
             $query = "INSERT INTO `uploads`( `file_name`, `file_description`, `file_type`, `file_uploader`, `deptid`, `yearid`, `subjectid`, `file`)
-             VALUES ('$file_title' , '$file_description' , '$fileext' , '$file_uploader' ,'$deptid','$yearid','$subjectid','$notefile')";
+             VALUES ('$file_title' , '$file_description' , '$fileext' , 'admin' ,'$deptid','$yearid','$subjectid','$notefile')";
             $result = mysqli_query($conn , $query) or die(mysqli_error($conn));
             if (mysqli_affected_rows($conn) > 0) {
                 echo "<script> alert('file uploaded successfully.It will be published after admin approves it');
@@ -86,22 +86,33 @@ echo "<script>alert('file size is not proper');</script>";
                                         <th><label for=" post_tags">DEPARTMENT ID</label> </th>
                                         <th> <select cclass=" form-control" name="deptid">
                                                 <?php
-              $sql = "SELECT * FROM `dept`";
+              $sql = "SELECT * FROM `subject`";
               $all_course = mysqli_query($conn,$sql);
               while ($course = mysqli_fetch_array($all_course,MYSQLI_ASSOC)):;
             ?>
                                                 <option class="form-control" value="<?php echo $course["deptid"];?>">
-                                                    <?php echo $course["deptid"] ,"-",$course["name"]; ?>
+                                                    <?php echo $course["deptid"] ,'-'  ;                           
+              $sql = "SELECT * FROM `dept` where deptid =$course[deptid] ";
+              
+              $all_course = mysqli_query($conn,$sql);
+              while ($course = mysqli_fetch_array($all_course,MYSQLI_ASSOC)):;
+            
+                         echo $course["name"];
+                            endwhile;  
+              
+                               
+                                                     ?>
                                                 </option>
                                                 <?php endwhile;      ?>
                                             </select></th>
 
                                     <tr>
-                                    <tr>
+                                         <tr>
+
                                         <th><label for=" post_tags">Year ID</label></th>
                                         <th> <select cclass=" form-control" name="yearid">
                                                 <?php
-              $sql = "SELECT * FROM `year`";
+              $sql = "SELECT * FROM `subject`";
               $all_course = mysqli_query($conn,$sql);
               while ($course = mysqli_fetch_array($all_course,MYSQLI_ASSOC)):;
             ?>

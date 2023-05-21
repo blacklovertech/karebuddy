@@ -13,14 +13,18 @@ if (isset($_POST['upload'])) {
     $yearid = $_POST['yearid'];
     $subjectid = $_POST['subjectid'];
     $imgpath = $_POST['imgpath'];
-
+   
     $query = "INSERT INTO `subject`( `name`, `descri`, `deptid`, `yearid`, `subjectid`, `imgpath`)
     VALUES ('$name' , '$descri' , '$deptid','$yearid','$subjectid','$imgpath')";
+     $structure = "../files/$deptid/$yearid/$subjectid";
+     if (!mkdir($structure, 0, true)) {
+     die('Failed to create folders...');
+     }
    $result = mysqli_query($conn , $query) or die(mysqli_error($conn));
 
    if (mysqli_affected_rows($conn) > 0) {
        echo "<script> alert('Added successfully.It will be published ');
-       window.location.href='notes.php';</script>";
+       window.location.href='subject.php';</script>";
    }
    else {
        "<script> alert('Error while Adding ..try again');</script>";
