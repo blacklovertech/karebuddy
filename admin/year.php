@@ -1,7 +1,4 @@
-<?php include ('includes/connection.php'); ?>
-<?php include ('includes/header.php'); ?>
-
-   
+  
 
  <div id="wrapper">
         <div id="page-wrapper">
@@ -13,7 +10,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                         <div class="col-xs-4">
-            <a href="uploadnote.php" class="btn btn-primary">Add New Year</a>
+            <a href="index.php?page=addyear" class="btn btn-primary">Add New Year</a>
             </div>
                         Year
                         </h1>
@@ -86,12 +83,3 @@ while ($row = mysqli_fetch_array($run_query)) {
         }
    ?>    
 
-
- <script src="js/jquery.js"></script>
-
-    
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html

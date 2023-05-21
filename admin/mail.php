@@ -1,5 +1,3 @@
-<?php include ('includes/connection.php'); ?>
-<?php include ('includes/header.php'); ?>
 
 
  <div id="wrapper">
@@ -12,7 +10,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                         <div class="col-xs-4">
-            </div> HELP Mail
+            </div> Mail
                         </h1>
                          
 <div class="row">
@@ -83,12 +81,3 @@ while ($row = mysqli_fetch_array($run_query)) {
         }
    ?>    
 
-
- <script src="js/jquery.js"></script>
-
-    
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html

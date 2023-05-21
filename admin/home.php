@@ -1,13 +1,4 @@
-
-<?php 
-include ('includes/header.php');
-include ('includes/connection.php');
-
-
-    ?>
-   
-
-            <div class="container-fluid">
+          <div class="container-fluid">
 
                
                         <h1 class="page-header">
@@ -113,14 +104,3 @@ echo " <td><a href='../files/$file' target='_blank' style='color:green'>Download
        
 
 ?>
-
-
-<script src="js/jquery.js"></script>
-
-  
-    <script src="js/bootstrap.min.js"></script>
-    <?php include 'includes/footer.php';?>
-</body>
-</html>
-
-

@@ -1,5 +1,3 @@
-<?php include ('includes/connection.php'); ?>
-<?php include ('includes/header.php'); ?>
 
 
  <div id="wrapper">
@@ -12,7 +10,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                         <div class="col-xs-4">
-            <a href="addsubject.php" class="btn btn-primary">Add New subject</a>
+            <a href="index.php?page=addsubject" class="btn btn-primary">Add New subject</a>
             </div>
                         Subject
                         </h1>
@@ -84,13 +82,3 @@ while ($row = mysqli_fetch_array($run_query)) {
         }
         }
    ?>    
-
-
- <script src="js/jquery.js"></script>
-
-    
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-
-</html

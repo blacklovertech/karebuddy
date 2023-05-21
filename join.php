@@ -4,8 +4,7 @@
         <div class="row">
             <div class="col-md-8 col-xl-6 text-center mx-auto">
                 <h2 class="display-6 fw-bold mb-4">Got any <span class="underline">questions</span>?</h2>
-                <p class="text-muted">Our team is always here to help. Send us a message and we'll get back to you
-                    shortly.</p>
+                <p class="text-muted">Our team is always here to help. You can also Join By filling the form</p>
             </div>
         </div>
 

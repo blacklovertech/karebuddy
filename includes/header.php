@@ -51,7 +51,7 @@ text-align: center;
                     <li class="nav-item"><a class="nav-link" href="index.php?page=subjectwise">Subject</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?page=deptwise">Department</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?page=latest">Latest</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?page=help">Help Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?page=join">Join Us</a></li>
                 </ul>
             </div>
         </div>

@@ -68,8 +68,8 @@ echo "<script>alert('file size is not proper');</script>";
                             <table class="table table-bordered table-striped table-hover">
                                 <tbody>
                                     <tr>
-                                        <th><label for="post_title" >Note Title</label></th>
-                                        <th> <input type="text"  name="title" class="form-control" value="<?php if(isset($_POST['upload'])) {
+                                        <th><label for="post_title">Note Title</label></th>
+                                        <th> <input type="text" name="title" class="form-control" value="<?php if(isset($_POST['upload'])) {
                                              echo $file_title; } ?>" required="">
                                         </th>
 

@@ -16,22 +16,19 @@ include('connection.php');
 
 </head>
 <body>
- 
 <table id="table" class="table">
 
 <tr>
     <td colspan="3" style="text-align:center;"><h2>Online Notes Sharing</h2></td>
 </tr>
     <tr>
-        <td><a href="home.php"><h3>Home</a></td>
-        <td><a href="notes.php"><h3>Notes</a></td>
-        <td><a href="year.php"><h3>Year</a></td>
+        <td><a href="index.php?page=home"><h3>Home</a></td>
+        <td><a href="index.php?page=notes"><h3>Notes</a></td>
+        <td><a href="index.php?page=year"><h3>Year</a></td>
         
-        <td><a href="blog.php"><h3>Blog</a></td>
-        <td><a href="subject.php"><h3>Subject</a></td>
-        <td><a href="dept.php"><h3>Dept</a></td>
-        <td><a href="users.php"><h3>Users</a></td>
-        <td><a href="help.php"><h3>Help</a></td>
+        <td><a href="index.php?page=subject"><h3>Subject</a></td>
+        <td><a href="index.php?page=dept"><h3>Dept</a></td>
+        <td><a href="index.php?page=mail"><h3>mail</a></td>
         <td><a href="../"><h3>Logout</a></td>
     </tr>
 </table>

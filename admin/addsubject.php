@@ -1,8 +1,4 @@
 <?php session_start();
-include ('includes/header.php');
-include ('includes/connection.php');
-
-
 
 if (isset($_POST['upload'])) {
     

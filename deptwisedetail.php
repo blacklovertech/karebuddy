@@ -31,7 +31,7 @@ include('includes/header.php');
 
                                 <div class="container"> <img class="card-img-top scale-on-hover"
                                         src="assets/img/<?php echo $course["imgpath"];?>" alt="Card Image">
-                                    <h2 class="h2"><?php echo $course["name"]?></h2>
+                                    <h2 class="h2"><?php echo $course["name"],'-',$course['yearid']?></h2>
 
                                 </div>
                                 <div class="card-body">
