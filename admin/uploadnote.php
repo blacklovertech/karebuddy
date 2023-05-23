@@ -1,5 +1,8 @@
 <?php session_start();
-include "filesLogic.php";
+define('KB', 1024);
+define('MB', 1048576);
+define('GB', 1073741824);
+define('TB', 1099511627776);
     ?>
 
 <?php
@@ -25,7 +28,7 @@ if (isset($_SESSION['id'])) {
     if (empty($file)) {
 echo "<script>alert('Attach a file');</script>";
     }
-    else if ($_FILES['file']['size'] <= 0 || $_FILES['file']['size']  > 46080000 )
+    else if ($_FILES['file']['size'] <= 0*kb || $_FILES['file']['size']  >  40*MB )
     {
 echo "<script>alert('file size is not proper');</script>";
     }
