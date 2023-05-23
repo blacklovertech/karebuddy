@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 define('KB', 1024);
 define('MB', 1048576);
 define('GB', 1073741824);
@@ -28,7 +28,7 @@ if (isset($_SESSION['id'])) {
     if (empty($file)) {
 echo "<script>alert('Attach a file');</script>";
     }
-    else if ($_FILES['file']['size'] <= 0*kb || $_FILES['file']['size']  >  40*MB )
+    else if ($_FILES['file']['size'] <= 0*KB || $_FILES['file']['size']  >  40*MB )
     {
 echo "<script>alert('file size is not proper');</script>";
     }
