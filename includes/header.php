@@ -7,7 +7,7 @@ include('connection.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>KARE- Zone</title>
+    <title>KARE- Zone | Online Notes Sharing</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -49,8 +49,10 @@ text-align: center;
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     
                     <li class="nav-item"><a class="nav-link" href="index.php?page=subjectwise">Subject</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.php?page=deptwise">Department</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?page=deptwise&start=0">Department</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?page=latest">Latest</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?page=books">Books</a></li>
+                    
                     <li class="nav-item"><a class="nav-link" href="index.php?page=join">Join Us</a></li>
                 </ul>
             </div>
