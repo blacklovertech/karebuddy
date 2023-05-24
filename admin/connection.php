@@ -9,8 +9,8 @@ $password = "HHLmF90ClybDFOSeZwbH"; // password
 
 //////// Do not Edit below /////////
 try {
-$dbo = new PDO('mysql:host=localhost;dbname='.$database, $username, $password);
-} catch (PDOException $e) {
+$dbo = new PDO("mysql:host=$dbhost_name;dbname=$database", $username, $password); 
+  } catch (PDOException $e) {
 print "Error!: " . $e->getMessage() . "<br/>";
 die();
 }
