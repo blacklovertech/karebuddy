@@ -2,10 +2,10 @@
 
 <?php
 
-$dbhost_name = "localhost";
-$database = "notes";// database name
+$dbhost_name = "containers-us-west-52.railway.app:6490";
+$database = "railway";// database name
 $username = "root"; // user name
-$password = ""; // password 
+$password = "HHLmF90ClybDFOSeZwbH"; // password 
 
 //////// Do not Edit below /////////
 try {
