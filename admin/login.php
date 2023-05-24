@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-session_start();
 include('connection.php');
 ?>
 
@@ -13,7 +12,11 @@ include('connection.php');
 
 
     <?php include('./header.php'); ?>
+    <?php 
+if(isset($_SESSION['login_id']))
+header("location:index.php?page=home");
 
+?>
 
 </head>
 <style>
